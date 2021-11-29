@@ -4,16 +4,16 @@
 
 int s[STACK_SIZE];
 int item;
-int top;
+int top = -1;
 
 void push(){
     if(top == STACK_SIZE - 1){
         printf("Stack overflow \n");
         return;
-    }else{
-        scanf("%d", &item);
-        s[++top] = item;
     }
+    scanf("%d", &item);
+    s[++top] = item;
+    
     
 }
 int pop(){
